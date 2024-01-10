@@ -7,8 +7,8 @@ export const FetchData = async (url, setStateFunc) => {
     if (response.status === 200) {
       if (response.data.allFeatureRequest) {
         setStateFunc(response.data);
-      } else if (response.data.task) {
-        setStateFunc(response.data.task);
+      } else if (response.data.featureReq) {
+        setStateFunc(response.data.featureReq);
       }
     }
   } catch (error) {

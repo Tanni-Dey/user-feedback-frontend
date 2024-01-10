@@ -59,6 +59,7 @@ const UserFeedback = () => {
         {/* <FeatureReqForm buttonText="Send Feature Request" /> */}
         {/* <AddFeatureRequest /> */}
 
+        {/* ---------- feature board-------- */}
         <div>
           {featureRequest?.allFeatureRequest?.map((singleFeatureReq) => (
             <div
@@ -101,6 +102,11 @@ const UserFeedback = () => {
                     {singleFeatureReq.vote ? singleFeatureReq.vote.length : 0}
                   </span>
                 </button>
+                <Link to={`/feature-request/${singleFeatureReq._id}`}>
+                  <button className="btn btn-sm focus:outline-0 bg-teal-700 text-white hover:bg-teal-600">
+                    Details
+                  </button>
+                </Link>
               </div>
             </div>
           ))}

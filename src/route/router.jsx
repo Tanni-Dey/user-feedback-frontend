@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Login from "../pages/Login/Login.jsx";
 import SignUp from "../pages/SignUp/SignUp.jsx";
 import UserFeedback from "../pages/UserFeedback/UserFeedback.jsx";
+import SingleFeedback from "../pages/SingleFeedback/SingleFeedback.jsx";
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <UserFeedback />,
+      },
+      {
+        path: "/feature-request/:id",
+        element: <SingleFeedback />,
       },
     ],
   },
